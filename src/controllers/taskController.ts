@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import express, { Request, Response } from 'express';
 
 import { Task } from '../models/taskModel';
 
@@ -32,3 +32,5 @@ export const deleteTaskById = (req: Request, res: Response) => {
     res.status(404).json({ message: 'Task not found' });
   }
 };
+
+export const TaskRouter = express.Router();
